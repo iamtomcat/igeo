@@ -27,7 +27,7 @@
 
 // mainMenuScene Layer
 
-@interface mainMenuScene : Layer
+@interface mainMenuScene : CCLayer
 {
 	CGPoint currentPos;
 }

@@ -45,7 +45,6 @@
 // Import the interfaces
 #import "gameAfrica.h"
 #import "mainMenuScene.h"
-#import "cocoslive.h"
 #import <UIKit/UIKit.h>
 
 

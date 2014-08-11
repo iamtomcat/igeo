@@ -141,6 +141,17 @@
 		E2EEAAD417C096BB0010D06B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEAAD317C096BB0010D06B /* AppDelegate.m */; };
 		E2EEAAD717C096BB0010D06B /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEAAD617C096BB0010D06B /* HelloWorldLayer.m */; };
 		E2EEAADA17C096BB0010D06B /* IntroLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEAAD917C096BB0010D06B /* IntroLayer.m */; };
+		E2EEAAF517C0975B0010D06B /* Explore.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEAAE217C0975B0010D06B /* Explore.m */; };
+		E2EEAAF617C0975B0010D06B /* gameAfrica.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEAAE417C0975B0010D06B /* gameAfrica.m */; };
+		E2EEAAF717C0975B0010D06B /* gameAmerica.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEAAE617C0975B0010D06B /* gameAmerica.m */; };
+		E2EEAAF817C0975B0010D06B /* gameAsiaOceania.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEAAE817C0975B0010D06B /* gameAsiaOceania.m */; };
+		E2EEAAF917C0975B0010D06B /* gameEurope.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEAAEA17C0975B0010D06B /* gameEurope.m */; };
+		E2EEAAFA17C0975B0010D06B /* gameWholeWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEAAEC17C0975B0010D06B /* gameWholeWorld.m */; };
+		E2EEAAFB17C0975B0010D06B /* howTo.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEAAEE17C0975B0010D06B /* howTo.m */; };
+		E2EEAAFC17C0975B0010D06B /* igeostartAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEAAF017C0975B0010D06B /* igeostartAppDelegate.m */; };
+		E2EEAAFD17C0975B0010D06B /* mainMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEAAF217C0975B0010D06B /* mainMenuScene.m */; };
+		E2EEAAFE17C0975B0010D06B /* playMenuScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EEAAF417C0975B0010D06B /* playMenuScene.m */; };
+		E2EEAB0017C099370010D06B /* PlausibleDatabase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2EEAAFF17C099370010D06B /* PlausibleDatabase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -425,6 +436,27 @@
 		E2EEAAD617C096BB0010D06B /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		E2EEAAD817C096BB0010D06B /* IntroLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IntroLayer.h; sourceTree = "<group>"; };
 		E2EEAAD917C096BB0010D06B /* IntroLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IntroLayer.m; sourceTree = "<group>"; };
+		E2EEAAE117C0975B0010D06B /* Explore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Explore.h; sourceTree = "<group>"; };
+		E2EEAAE217C0975B0010D06B /* Explore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Explore.m; sourceTree = "<group>"; };
+		E2EEAAE317C0975B0010D06B /* gameAfrica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameAfrica.h; sourceTree = "<group>"; };
+		E2EEAAE417C0975B0010D06B /* gameAfrica.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameAfrica.m; sourceTree = "<group>"; };
+		E2EEAAE517C0975B0010D06B /* gameAmerica.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameAmerica.h; sourceTree = "<group>"; };
+		E2EEAAE617C0975B0010D06B /* gameAmerica.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameAmerica.m; sourceTree = "<group>"; };
+		E2EEAAE717C0975B0010D06B /* gameAsiaOceania.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameAsiaOceania.h; sourceTree = "<group>"; };
+		E2EEAAE817C0975B0010D06B /* gameAsiaOceania.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameAsiaOceania.m; sourceTree = "<group>"; };
+		E2EEAAE917C0975B0010D06B /* gameEurope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameEurope.h; sourceTree = "<group>"; };
+		E2EEAAEA17C0975B0010D06B /* gameEurope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameEurope.m; sourceTree = "<group>"; };
+		E2EEAAEB17C0975B0010D06B /* gameWholeWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gameWholeWorld.h; sourceTree = "<group>"; };
+		E2EEAAEC17C0975B0010D06B /* gameWholeWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gameWholeWorld.m; sourceTree = "<group>"; };
+		E2EEAAED17C0975B0010D06B /* howTo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = howTo.h; sourceTree = "<group>"; };
+		E2EEAAEE17C0975B0010D06B /* howTo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = howTo.m; sourceTree = "<group>"; };
+		E2EEAAEF17C0975B0010D06B /* igeostartAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = igeostartAppDelegate.h; sourceTree = "<group>"; };
+		E2EEAAF017C0975B0010D06B /* igeostartAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = igeostartAppDelegate.m; sourceTree = "<group>"; };
+		E2EEAAF117C0975B0010D06B /* mainMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mainMenuScene.h; sourceTree = "<group>"; };
+		E2EEAAF217C0975B0010D06B /* mainMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mainMenuScene.m; sourceTree = "<group>"; };
+		E2EEAAF317C0975B0010D06B /* playMenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playMenuScene.h; sourceTree = "<group>"; };
+		E2EEAAF417C0975B0010D06B /* playMenuScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = playMenuScene.m; sourceTree = "<group>"; };
+		E2EEAAFF17C099370010D06B /* PlausibleDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PlausibleDatabase.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -442,6 +474,7 @@
 				E2EEA93C17C096B50010D06B /* CoreGraphics.framework in Frameworks */,
 				E2EEA93E17C096B50010D06B /* CoreText.framework in Frameworks */,
 				E2EEA94017C096B50010D06B /* GameKit.framework in Frameworks */,
+				E2EEAB0017C099370010D06B /* PlausibleDatabase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +518,8 @@
 		E2EEA94117C096B50010D06B /* iGeo */ = {
 			isa = PBXGroup;
 			children = (
+				E2EEAAFF17C099370010D06B /* PlausibleDatabase.framework */,
+				E2EEAAE017C0975B0010D06B /* Classes */,
 				E2EEAAD217C096BB0010D06B /* AppDelegate.h */,
 				E2EEAAD317C096BB0010D06B /* AppDelegate.m */,
 				E2EEAAD517C096BB0010D06B /* HelloWorldLayer.h */,
@@ -879,6 +914,33 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E2EEAAE017C0975B0010D06B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E2EEAAE117C0975B0010D06B /* Explore.h */,
+				E2EEAAE217C0975B0010D06B /* Explore.m */,
+				E2EEAAE317C0975B0010D06B /* gameAfrica.h */,
+				E2EEAAE417C0975B0010D06B /* gameAfrica.m */,
+				E2EEAAE517C0975B0010D06B /* gameAmerica.h */,
+				E2EEAAE617C0975B0010D06B /* gameAmerica.m */,
+				E2EEAAE717C0975B0010D06B /* gameAsiaOceania.h */,
+				E2EEAAE817C0975B0010D06B /* gameAsiaOceania.m */,
+				E2EEAAE917C0975B0010D06B /* gameEurope.h */,
+				E2EEAAEA17C0975B0010D06B /* gameEurope.m */,
+				E2EEAAEB17C0975B0010D06B /* gameWholeWorld.h */,
+				E2EEAAEC17C0975B0010D06B /* gameWholeWorld.m */,
+				E2EEAAED17C0975B0010D06B /* howTo.h */,
+				E2EEAAEE17C0975B0010D06B /* howTo.m */,
+				E2EEAAEF17C0975B0010D06B /* igeostartAppDelegate.h */,
+				E2EEAAF017C0975B0010D06B /* igeostartAppDelegate.m */,
+				E2EEAAF117C0975B0010D06B /* mainMenuScene.h */,
+				E2EEAAF217C0975B0010D06B /* mainMenuScene.m */,
+				E2EEAAF317C0975B0010D06B /* playMenuScene.h */,
+				E2EEAAF417C0975B0010D06B /* playMenuScene.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1064,6 +1126,16 @@
 				E2EEAAD417C096BB0010D06B /* AppDelegate.m in Sources */,
 				E2EEAAD717C096BB0010D06B /* HelloWorldLayer.m in Sources */,
 				E2EEAADA17C096BB0010D06B /* IntroLayer.m in Sources */,
+				E2EEAAF517C0975B0010D06B /* Explore.m in Sources */,
+				E2EEAAF617C0975B0010D06B /* gameAfrica.m in Sources */,
+				E2EEAAF717C0975B0010D06B /* gameAmerica.m in Sources */,
+				E2EEAAF817C0975B0010D06B /* gameAsiaOceania.m in Sources */,
+				E2EEAAF917C0975B0010D06B /* gameEurope.m in Sources */,
+				E2EEAAFA17C0975B0010D06B /* gameWholeWorld.m in Sources */,
+				E2EEAAFB17C0975B0010D06B /* howTo.m in Sources */,
+				E2EEAAFC17C0975B0010D06B /* igeostartAppDelegate.m in Sources */,
+				E2EEAAFD17C0975B0010D06B /* mainMenuScene.m in Sources */,
+				E2EEAAFE17C0975B0010D06B /* playMenuScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1115,6 +1187,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/iGeo\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iGeo/Prefix.pch;
@@ -1135,6 +1211,10 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/iGeo\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = iGeo/Prefix.pch;
 				HEADER_SEARCH_PATHS = "\"iGeo/libs/kazmath/include\"";

@@ -71,7 +71,7 @@ enum {
 +(id) scene
 {
 	// 'scene' is an autorelease object.
-	Scene *scene = [Scene node];
+	CCScene *scene = [CCScene node];
 	
 	// 'layer' is an autorelease object.
 	Explore *layer = [Explore node];
@@ -99,7 +99,7 @@ enum {
 //touch recognition function
 -(void) registerWithTouchDispatcher
 {
-	[[TouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+	[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
 }
 
 //touch begin function
@@ -117,11 +117,11 @@ enum {
 	
 	if (tapCount == 2) {
 		CGPoint touchLocation = [touch locationInView: [touch view]];	
-		CGPoint convertedPoint = [[Director sharedDirector] convertToGL:touchLocation];
+		CGPoint convertedPoint = [[CCDirector sharedDirector] convertToGL:touchLocation];
 		
 		id map = [self getChildByTag:kTagTileMap];
 		//TMXTiledMap *map = [TMXTiledMap tiledMapWithTMXFile:@"worldMap.tmx"];
-		TMXLayer *namepop = [map layerNamed:@"tileId"];
+		CCTMXLayer *namepop = [map layerNamed:@"tileId"];
 
 		CGPoint addtest = ccpSub(convertedPoint, currentPos);
 		
@@ -136,7 +136,7 @@ enum {
 		{
 			NSNumber *inputInt = [[NSNumber alloc] initWithInteger: test];
 			output = [self getCountryName:inputInt];
-			Label *label = (Label*) [self getChildByTag:kTagBitmapAtlas3];
+			CCLabelAtlas *label = (CCLabelAtlas*) [self getChildByTag:kTagBitmapAtlas3];
 			[label setString:output];
 		}
 		//updates label with country name whecn clicked
@@ -150,13 +150,13 @@ enum {
 	CGPoint touchLocation = [touch locationInView: [touch view]];	
 	CGPoint prevLocation = [touch previousLocationInView: [touch view]];	
 	
-	touchLocation = [[Director sharedDirector] convertToGL: touchLocation];
-	prevLocation = [[Director sharedDirector] convertToGL: prevLocation];
+	touchLocation = [[CCDirector sharedDirector] convertToGL: touchLocation];
+	prevLocation = [[CCDirector sharedDirector] convertToGL: prevLocation];
 	
 	CGPoint diff = ccpSub(touchLocation,prevLocation);
 
 	
-	CocosNode *node = [self getChildByTag:kTagTileMap];
+	CCNode *node = [self getChildByTag:kTagTileMap];
 	currentPos = [node position];
 	CGPoint holdPos = currentPos;//[node position];
 
@@ -194,7 +194,7 @@ enum {
 //current position timer to make sure that you don't go out of bounds
 -(void) checkBounds:(ccTime)dt
 {	
-	CocosNode *node = [self getChildByTag:kTagTileMap];
+	CCNode *node = [self getChildByTag:kTagTileMap];
 	currentPos = [node position];
 	
 	heightPixels = (((mapLayerSize.height*(32*zoomFactor))-320)+8);
@@ -203,42 +203,42 @@ enum {
 	//Check for bottom left corner
 	if ((currentPos.x>8)&&(currentPos.y>8)) 
 	{
-		[node runAction:[MoveTo actionWithDuration: 0.2f position:ccp(0, 0)]];
+		[node runAction:[CCMoveTo actionWithDuration: 0.2f position:ccp(0, 0)]];
 	}
 	//check for top left corner
 	else if ((currentPos.x>8)&&(currentPos.y<-heightPixels)) 
 	{
-		[node runAction:[MoveTo actionWithDuration: 0.2f position:ccp(0, -(heightPixels-8))]];
+		[node runAction:[CCMoveTo actionWithDuration: 0.2f position:ccp(0, -(heightPixels-8))]];
 	}
 	//check for bottom right corner
 	else if ((currentPos.x<-widthPixels)&&((currentPos.y*zoomFactor)>(8*zoomFactor))) 
 	{
-		[node runAction:[MoveTo actionWithDuration: 0.2f position:ccp(-(widthPixels-8), 0)]];
+		[node runAction:[CCMoveTo actionWithDuration: 0.2f position:ccp(-(widthPixels-8), 0)]];
 	}
 	//check for top right corner
 	else if ((currentPos.x<-widthPixels)&&(currentPos.y<-heightPixels)) 
 	{
-		[node runAction:[MoveTo actionWithDuration: 0.2f position:ccp(-(widthPixels-8), -(heightPixels-8))]];
+		[node runAction:[CCMoveTo actionWithDuration: 0.2f position:ccp(-(widthPixels-8), -(heightPixels-8))]];
 	}
 	//Left Side Check to make sure the user can't go any farther left
 	else if (currentPos.x>8) 
 	{
-		[node runAction:[MoveTo actionWithDuration: 0.2f position:ccp(0, currentPos.y)]];
+		[node runAction:[CCMoveTo actionWithDuration: 0.2f position:ccp(0, currentPos.y)]];
 	}
 	//bottem check to make sure user can't go down too far
 	else if(currentPos.y>8)
 	{
-		[node runAction:[MoveTo actionWithDuration: 0.2f position:ccp(currentPos.x, 0)]];
+		[node runAction:[CCMoveTo actionWithDuration: 0.2f position:ccp(currentPos.x, 0)]];
 	}
 	//top check to make sure user can't go too far up
 	else if(((int)currentPos.y)<-(heightPixels))
 	{
-		[node runAction:[MoveTo actionWithDuration: 0.2f position:ccp((currentPos.x), -(heightPixels-8))]];		
+		[node runAction:[CCMoveTo actionWithDuration: 0.2f position:ccp((currentPos.x), -(heightPixels-8))]];		
 	}
 	//right check to make sure user can't go too far right
 	else if(((int)currentPos.x)<-widthPixels)
 	{
-		[node runAction:[MoveTo actionWithDuration: 0.2f position:ccp(-(widthPixels-8), (currentPos.y))]];
+		[node runAction:[CCMoveTo actionWithDuration: 0.2f position:ccp(-(widthPixels-8), (currentPos.y))]];
 	}
 
 	
@@ -263,7 +263,7 @@ enum {
 					if (isLoaded[xCoord+x][yCoord+y]==FALSE) 
 					{
 						NSString* nextTileString = [NSString stringWithFormat:@"%d_%d.tmx",xCoord+x,yCoord+y];
-						TMXTiledMap *nextTile = [TMXTiledMap tiledMapWithTMXFile:nextTileString];
+						CCTMXTiledMap *nextTile = [CCTMXTiledMap tiledMapWithTMXFile:nextTileString];
 						nextTile.position = ccp(((xCoord+x)*512),((yCoord+y)*512));
 						
 						[map addChild:nextTile z:0 tag:positionTag[xCoord+x][yCoord+y]];
@@ -288,7 +288,7 @@ enum {
 					if (isLoaded[xCoord+x][yCoord+y]==FALSE) 
 					{
 						NSString* nextTileString = [NSString stringWithFormat:@"%d_%d.tmx",xCoord+x,yCoord+y];
-						TMXTiledMap *nextTile = [TMXTiledMap tiledMapWithTMXFile:nextTileString];
+						CCTMXTiledMap *nextTile = [CCTMXTiledMap tiledMapWithTMXFile:nextTileString];
 						nextTile.position = ccp(((xCoord+x)*512),((yCoord+y)*512));
 						
 						[map addChild:nextTile z:0 tag:positionTag[xCoord+x][yCoord+y]];
@@ -313,7 +313,7 @@ enum {
 					if (isLoaded[xCoord+x][yCoord+y]==FALSE) 
 					{
 						NSString* nextTileString = [NSString stringWithFormat:@"%d_%d.tmx",xCoord+x,yCoord+y];
-						TMXTiledMap *nextTile = [TMXTiledMap tiledMapWithTMXFile:nextTileString];
+						CCTMXTiledMap *nextTile = [CCTMXTiledMap tiledMapWithTMXFile:nextTileString];
 						nextTile.position = ccp(((xCoord+x)*512),((yCoord+y)*512));
 						
 						[map addChild:nextTile z:0 tag:positionTag[xCoord+x][yCoord+y]];
@@ -341,7 +341,7 @@ enum {
 					if (isLoaded[xCoord+x][yCoord+y]==FALSE) 
 					{
 						NSString* nextTileString = [NSString stringWithFormat:@"%d_%d.tmx",xCoord+x,yCoord+y];
-						TMXTiledMap *nextTile = [TMXTiledMap tiledMapWithTMXFile:nextTileString];
+						CCTMXTiledMap *nextTile = [CCTMXTiledMap tiledMapWithTMXFile:nextTileString];
 						nextTile.position = ccp(((xCoord+x)*512),((yCoord+y)*512));
 						
 						[map addChild:nextTile z:0 tag:positionTag[xCoord+x][yCoord+y]];
@@ -366,7 +366,7 @@ enum {
 					if (isLoaded[xCoord+x][yCoord+y]==FALSE) 
 					{
 						NSString* nextTileString = [NSString stringWithFormat:@"%d_%d.tmx",xCoord+x,yCoord+y];
-						TMXTiledMap *nextTile = [TMXTiledMap tiledMapWithTMXFile:nextTileString];
+						CCTMXTiledMap *nextTile = [CCTMXTiledMap tiledMapWithTMXFile:nextTileString];
 						nextTile.position = ccp(((xCoord+x)*512),((yCoord+y)*512));
 						
 						[map addChild:nextTile z:0 tag:positionTag[xCoord+x][yCoord+y]];
@@ -391,7 +391,7 @@ enum {
 					if (isLoaded[xCoord+x][yCoord+y]==FALSE) 
 					{
 						NSString* nextTileString = [NSString stringWithFormat:@"%d_%d.tmx",xCoord+x,yCoord+y];
-						TMXTiledMap *nextTile = [TMXTiledMap tiledMapWithTMXFile:nextTileString];
+						CCTMXTiledMap *nextTile = [CCTMXTiledMap tiledMapWithTMXFile:nextTileString];
 						nextTile.position = ccp(((xCoord+x)*512),((yCoord+y)*512));
 						
 						[map addChild:nextTile z:0 tag:positionTag[xCoord+x][yCoord+y]];
@@ -417,7 +417,7 @@ enum {
 				if (isLoaded[xCoord+x][yCoord+y]==FALSE) 
 				{
 					NSString* nextTileString = [NSString stringWithFormat:@"%d_%d.tmx",xCoord+x,yCoord+y];
-					TMXTiledMap *nextTile = [TMXTiledMap tiledMapWithTMXFile:nextTileString];
+					CCTMXTiledMap *nextTile = [CCTMXTiledMap tiledMapWithTMXFile:nextTileString];
 					nextTile.position = ccp(((xCoord+x)*512),((yCoord+y)*512));
 					
 					[map addChild:nextTile z:0 tag:positionTag[xCoord+x][yCoord+y]];
@@ -442,7 +442,7 @@ enum {
 				if (isLoaded[xCoord+x][yCoord+y]==FALSE) 
 				{
 					NSString* nextTileString = [NSString stringWithFormat:@"%d_%d.tmx",xCoord+x,yCoord+y];
-					TMXTiledMap *nextTile = [TMXTiledMap tiledMapWithTMXFile:nextTileString];
+					CCTMXTiledMap *nextTile = [CCTMXTiledMap tiledMapWithTMXFile:nextTileString];
 					nextTile.position = ccp(((xCoord+x)*512),((yCoord+y)*512));
 					
 					[map addChild:nextTile z:0 tag:positionTag[xCoord+x][yCoord+y]];
@@ -467,7 +467,7 @@ enum {
 				if (isLoaded[xCoord+x][yCoord+y]==FALSE) 
 				{
 					NSString* nextTileString = [NSString stringWithFormat:@"%d_%d.tmx",xCoord+x,yCoord+y];
-					TMXTiledMap *nextTile = [TMXTiledMap tiledMapWithTMXFile:nextTileString];
+					CCTMXTiledMap *nextTile = [CCTMXTiledMap tiledMapWithTMXFile:nextTileString];
 					nextTile.position = ccp(((xCoord+x)*512),((yCoord+y)*512));
 					
 					[map addChild:nextTile z:0 tag:positionTag[xCoord+x][yCoord+y]];
@@ -635,12 +635,12 @@ enum {
 	}
 	
 	//loads tile map into the scene
-	TMXTiledMap *map = [TMXTiledMap tiledMapWithTMXFile:@"worldMap.tmx"];
+	CCTMXTiledMap *map = [CCTMXTiledMap tiledMapWithTMXFile:@"worldMap.tmx"];
 	map.position = ccp(-5000,-3500);
 	[self addChild:map z:0 tag:kTagTileMap];
 	
 	//Sets the size of layer
-	TMXLayer *mapLayer = [map layerNamed:@"tileId"];
+	CCTMXLayer *mapLayer = [map layerNamed:@"tileId"];
 	mapLayerSize = [mapLayer layerSize];
 	mapLayer.visible = NO;
 	
@@ -692,18 +692,18 @@ enum {
 		zoomFactor = 1;
 		
 		//retrieves size of the window.
-		CGSize s = [[Director sharedDirector] winSize];
+		CGSize s = [[CCDirector sharedDirector] winSize];
 		
 		//set background
-		Sprite *background = [Sprite spriteWithFile:@"background.png"];
+		CCSprite *background = [CCSprite spriteWithFile:@"background.png"];
 		background.position = ccp(240, 160);
 		[self addChild:background z:-1];
 		
-		Sprite *labelBackground = [Sprite spriteWithFile:@"exploreLabel.png"];
+		CCSprite *labelBackground = [CCSprite spriteWithFile:@"exploreLabel.png"];
 		[self addChild:labelBackground z:1];
 		labelBackground.position = ccp(s.width/2,s.height-25);
 		//Creates a Blank Label to be updated later
-		Label *label = [Label labelWithString:@"tap a country" fontName:@"comic_andy" fontSize:40];
+		CCLabelTTF *label = [CCLabelTTF labelWithString:@"tap a country" fontName:@"comic_andy" fontSize:40];
 		//set font colour
 		[label setColor:ccc3(0, 0, 0)];
 		//sets the label position
@@ -713,11 +713,11 @@ enum {
 
 		[self loadMaps];
 		
-		MenuItemImage *zoomin = [MenuItemImage itemFromNormalImage:@"zoomin.png" selectedImage:@"zoominClicked.png"  target:self selector:@selector(zoomIn:)];
-		MenuItemImage *zoomout = [MenuItemImage itemFromNormalImage:@"zoomout.png" selectedImage:@"zoomoutClicked.png"  target:self selector:@selector(zoomOut:)];
-		MenuItemImage *quit = [MenuItemImage	itemFromNormalImage:@"quit.png" selectedImage:@"quitClicked.png" target:self selector:@selector(quitButton:)];
+		CCMenuItemImage *zoomin = [CCMenuItemImage itemFromNormalImage:@"zoomin.png" selectedImage:@"zoominClicked.png"  target:self selector:@selector(zoomIn:)];
+		CCMenuItemImage *zoomout = [CCMenuItemImage itemFromNormalImage:@"zoomout.png" selectedImage:@"zoomoutClicked.png"  target:self selector:@selector(zoomOut:)];
+		CCMenuItemImage *quit = [CCMenuItemImage	itemFromNormalImage:@"quit.png" selectedImage:@"quitClicked.png" target:self selector:@selector(quitButton:)];
 
-		Menu *menu = [Menu menuWithItems:quit, zoomout, zoomin, nil];
+		CCMenu *menu = [CCMenu menuWithItems:quit, zoomout, zoomin, nil];
 				
 		menu.position = CGPointZero;
 		
@@ -785,12 +785,12 @@ enum {
 	if(run==TRUE)
 	{
 		[self unschedule:@selector(checkBounds:)];
-		CocosNode *node = [self getChildByTag:kTagTileMap];
+		CCNode *node = [self getChildByTag:kTagTileMap];
 		currentPos = [node position];
 		CGPoint savepos = currentPos;
 		
-		[node runAction:[MoveTo actionWithDuration:0.2f position:ccp((int)((savepos.x*multiply)+120),(int)((savepos.y*multiply)+80))]];
-		[node runAction:[ScaleTo actionWithDuration:0.2f scale:zoomFactor]];
+		[node runAction:[CCMoveTo actionWithDuration:0.2f position:ccp((int)((savepos.x*multiply)+120),(int)((savepos.y*multiply)+80))]];
+		[node runAction:[CCScaleTo actionWithDuration:0.2f scale:zoomFactor]];
 		[self schedule:@selector(checkBounds:) interval:0.2f];
 	}
 	

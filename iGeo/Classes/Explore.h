@@ -36,7 +36,7 @@
 #import <sqlite3.h>
 
 // Explore Layer
-@interface Explore : Layer
+@interface Explore : CCLayer
 {
 	//Database Variables
 	PLSqliteDatabase *db;

@@ -38,7 +38,7 @@
 #import <sqlite3.h>
 
 // gameModule
-@interface gameAfrica : Layer
+@interface gameAfrica : CCLayer
 {
 	//Database Variables
 	PLSqliteDatabase *db;
