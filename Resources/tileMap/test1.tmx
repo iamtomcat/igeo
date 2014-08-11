@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="orthogonal" width="3" height="2" tilewidth="1020" tileheight="1020">
+ <tileset name="1" firstgid="1" tilewidth="1020" tileheight="1020">
+  <image source="../../1.png"/>
+ </tileset>
+ <tileset name="2" firstgid="2" tilewidth="1020" tileheight="1020">
+  <image source="../../2.png"/>
+ </tileset>
+ <tileset name="3" firstgid="3" tilewidth="1020" tileheight="1020">
+  <image source="../../3.png"/>
+ </tileset>
+ <tileset name="4" firstgid="4" tilewidth="1020" tileheight="1020">
+  <image source="../../4.png"/>
+ </tileset>
+ <tileset name="5" firstgid="5" tilewidth="1020" tileheight="1020">
+  <image source="../../5.png"/>
+ </tileset>
+ <tileset name="6" firstgid="6" tilewidth="1020" tileheight="1020">
+  <image source="../../6.png"/>
+ </tileset>
+ <layer name="1" width="3" height="2">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgYGBgZMAEAGbxpsYYAAAA
+  </data>
+ </layer>
+ <layer name="2" width="3" height="2">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgQAVMUBoAXc3k4RgAAAA=
+  </data>
+ </layer>
+ <layer name="3" width="3" height="2">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgQABmJDYA0Bhf1BgAAAA=
+  </data>
+ </layer>
+ <layer name="4" width="3" height="2">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNgwAQsQAwAd12jLBgAAAA=
+  </data>
+ </layer>
+ <layer name="5" width="3" height="2">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNggABWBlQAADYXmNkYAAAA
+  </data>
+ </layer>
+ <layer name="6" width="3" height="2">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAGNjwA4AcJj8ExgAAAA=
+  </data>
+ </layer>
+</map>

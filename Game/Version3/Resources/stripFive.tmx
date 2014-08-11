@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="orthogonal" width="16" height="112" tilewidth="32" tileheight="32">
+ <tileset name="ref1" firstgid="1" tilewidth="32" tileheight="32">
+  <image source="ref1_europe.png"/>
+ </tileset>
+ <tileset name="ref4" firstgid="1025" tilewidth="32" tileheight="32">
+  <image source="ref4_africa.png"/>
+ </tileset>
+ <layer name="stripFive1" width="16" height="112">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAO2SSRLBQBhGQ86BXAS5CFKcA8EtzMMxzBzDWBzD+Hph352t71W9yuZ/1d2V3/OEEEIIIYQQQgghhBBC/AuZlOdlMYdByr3P0xSwiGGCvkRTxgpGCfo6TQObGFv2XeZ62McBDnGEY8t+ztwCl7jCNW4c7n5g9ognPOMFrw79g9knvvCNH9Om7fsisyFmMIs5h7bKWTVzZ5orVjCy7Ft0beyYO5vG57/xjS37Cd0UZ2ZfaQMc0Y4t+y3dDvdmX2lDXNNuHN5/o72bfaWNfPvuR5qzfGzSxgl6IZLyBYAk1xkAHAAA
+  </data>
+ </layer>
+ <layer name="stripFive4" width="16" height="112">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAO3RV1IUYRQF4H5AcQWkgZlZhUqYsAoTElahIHEVJiSswoSEVZiQsApRJ/H1+/wFXeXjPVXfS885t2q6sywSiUQikUgkEolEIpHIdWndzrI2Hbr0yAZvvi/pjjNBmQrVAvtp3Rlq1GnQzG8OuEmZCtWB/vtZ3afMMc8Ci/lN/Rp1GjQT+xXdVdZYZ4PN/Kb+HPMssJjYb+m+Y5sddtnLb+qvsc4Gm4n9vu4XDjjkiOP8pv42O+yyl9if6P7ilDPOuchv6h9wyBHHiX1Lt02HLr38291xU/+UM865SOyHPB9mhFHGKNGmQ5devr3Vf3/Xb/e4zyRTTDOuP0GZCtXE/oHuQx7xmCfMMqNfo06DZmL/TPc5SyzzgpXEf+2Xl7qveM0b3rJVYP9e9wMf+cRn9gvsv+p+4zs/+MlJgf1v3Uv+8Jd/tArsh7zXYUYYZYxS4l1HIpFIJBKJ/I9cAafqE7gAHAAA
+  </data>
+ </layer>
+</map>

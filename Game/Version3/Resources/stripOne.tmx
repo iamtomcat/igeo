@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="orthogonal" width="16" height="112" tilewidth="32" tileheight="32">
+ <tileset name="ref2" firstgid="1" tilewidth="32" tileheight="32">
+  <image source="ref2_africa.png"/>
+ </tileset>
+ <layer name="stripOne2" width="16" height="112">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAO3U11FqURiG4Y2Yu0CMdKFi7ALMdiGYuzALXZhIXZhIVZzHAlwzh7szZ30zz9U/79Xas5MkLi4uLi4uLi4u7t9YdYCmToMmrQH6Dl169Afox1JJMs4Ek6m/7+c08yyQC/SLbkssk2eFVdZYZ4PNQF9wK7LFNjvsssc+BxwG+iO3EmWOOeGUM8654DLQX7ldc8Mtd9zzwCMVqoH+ye2ZF155o0adBk1agf7d7YNPvvimTYcuPfqBPjWUJEOkGWaEUcYYZ4LJod/7jNsUWaaZYZY55lkgF+gX3ZZYJs8Kq6yxzgabgb7gVmSLbXbYZY99DjgM9EduJcocc8IpZ5xzwWWgv3K75oZb7rjngUcqVAP9k9szL7zyRo06DZq0Av272weffPFNmw5devQDfSrt/UkzzAijjDHOBJPp3/uM2xRZpplhljnmWSAX6BfdllgmzwqrrLHOBpuBvuBWZIttdthlj30OOAz0R24lyhxzwilnnHPBZaC/crvmhlvuuOeBRypUA/2T2zMvvPJGjToNmrQC/bvbB5988U2bDl169AN9aD+/jZ9PZ8A8yTBFdsA+Li4uLi4uLi7u/90fFG7aLAAcAAA=
+  </data>
+ </layer>
+</map>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE map SYSTEM "http://mapeditor.org/dtd/1.0/map.dtd">
+<map version="1.0" orientation="orthogonal" width="16" height="16" tilewidth="32" tileheight="32">
+ <tileset name="ref" firstgid="1" tilewidth="32" tileheight="32">
+  <image source="21_2.png"/>
+ </tileset>
+ <layer name="21_2" width="16" height="16">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAO3DiVJBAQAAwEdCjpJKKB10H+RIoULoIPL/X9P+RjN2ZkNBEIRdM+K6UWPG3TBh0pRpN90y47ZZd9x1z5z75i1Y9MBDSx557Imnlq145rkXXnrltTfeeue9VWs+WLdh05aPtn3y2Y5de7746pt9Bw59d+TYiR9++uW3U2f+OHfhr8tgZeV/+wMDR6XsAAQAAA==
+  </data>
+ </layer>
+</map>
